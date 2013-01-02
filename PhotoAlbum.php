@@ -6,7 +6,7 @@ class PhotoAlbum extends DataObject {
 	   'SortID' => 'Int',
 		"Name" => "Text",
 		"Description" => "HTMLText",
-		"ShowGallery" => "Boolean"
+		"ShowAlbum" => "Boolean"
 	);
 	
 	static $has_one = array (
@@ -44,7 +44,7 @@ class PhotoAlbum extends DataObject {
 			new TextField('Name'),
 			new TextareaField('Description'),
 			new UploadField('Photo','Gallery Cover Photo'),
-			new CheckboxField('ShowGallery','Show Gallery'),
+			new CheckboxField('ShowAlbum','Show Album'),
 			$PhotosGridField
 		);
 	}
